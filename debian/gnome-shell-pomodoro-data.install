@@ -1,0 +1,6 @@
+usr/share/glib-2.0/schemas/org.gnome.pomodoro.*gschema.xml
+usr/share/gnome-pomodoro/*
+usr/share/gnome-shell/extensions/pomodoro@arun.codito.in/*
+usr/share/icons/*
+usr/share/locale/*/*/gnome-pomodoro.mo
+usr/share/metainfo/org.gnome.Pomodoro.appdata.xml

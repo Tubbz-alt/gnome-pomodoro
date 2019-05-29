@@ -1,0 +1,5 @@
+usr/bin/gnome-pomodoro
+usr/lib/*/gnome-pomodoro/plugins/*
+usr/lib/*/libgnome-pomodoro*
+usr/share/applications/*
+usr/share/dbus-1/services/*

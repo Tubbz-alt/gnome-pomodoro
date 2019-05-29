@@ -1,0 +1,228 @@
+gnome-shell-pomodoro (0.15.1-1pop1) disco; urgency=medium
+
+  * Package new release for disco
+
+ -- Michael Aaron Murphy <michael@system76.com>  Wed, 29 May 2019 16:49:57 -0600
+
+gnome-shell-pomodoro (0.13.4-3ubuntu1) cosmic; urgency=medium
+
+  * Build-Depend on gjs to only build on architectures where this
+    package is installable
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 05 Oct 2018 17:57:36 -0400
+
+gnome-shell-pomodoro (0.13.4-3) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * Drop --with autoreconf (unnecessary with dh compat 10+)
+  * Use gnome-shell-pomodoro-data.docs to install NEWS
+  * Add minimal debian/gbp.conf
+  * Fix trivial Lintian warning
+
+  [ Joseph Herlant ]
+  * Add patch for the absence of global.screen in gnome-shell >= 3.29
+    (Closes: #905107)
+  * Use Ayatana AppIndicator instead of the deprecated Ubuntu AppIndicator
+  * Add d/u/metadata using DEP-12
+  * d/control: bump standards to 4.2.1
+  * Add patch to get rid of the default on get accessors that FTBS with
+    Vala 0.42.0 (Closes: #907897)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Mon, 03 Sep 2018 20:25:46 -0700
+
+gnome-shell-pomodoro (0.13.4-2) unstable; urgency=low
+
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/control: Fix Vcs-Browser typo
+  * Remove the upper boundary for gnome-shell requirements (Closes: #891306)
+  * d/copyright: fix insecure-copyright-format-uri
+  * d/copyright: update Source url after the repository has been renamed
+  * d/control: bump standards to 4.1.3
+  * d/compat: bump compat to 11
+  * d/control: update debhelper version to match compat
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 25 Feb 2018 21:42:03 -0800
+
+gnome-shell-pomodoro (0.13.4-1) unstable; urgency=low
+
+  * Add local source file for better gbp integration with quilt
+  * New upstream version 0.13.4
+  * New upstream version 0.13.4
+  * Fixes appstream patch broken by appstream-glib defaults changes in 0.7.3
+    (Closes: #882005)
+  * Bump standards to 4.1.1
+  * Add autopkgtests for debci
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 26 Nov 2017 13:00:02 -0800
+
+gnome-shell-pomodoro (0.13.3-1) unstable; urgency=low
+
+  * New upstream version 0.13.3
+  * New release version now compatible with gnome-shell 3.26 (Closes: #874286)
+  * Bump Standards to 4.1.0
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 10 Sep 2017 19:11:16 -0700
+
+gnome-shell-pomodoro (0.13.2-1) unstable; urgency=low
+
+  * New upstream version 0.13.2
+  * Re-enable tests (Closes: #791494)
+  * Moves gnome-pomodoro.1 from patch to debian folder for maintainability
+  * Bump compat to 10 and remove dh-autoreconf
+  * Bump standards-version to 4.0.0
+  * Moving appdata to fix appstream-metadata-in-legacy-location
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 13 Aug 2017 09:02:54 -0700
+
+gnome-shell-pomodoro (0.13.1-1) unstable; urgency=low
+
+  * New upstream version 0.13.1 (Closes: #856797, #855049)
+  * 0.13.1 brings support for gnome-shell 3.24
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sat, 04 Mar 2017 11:12:49 -0800
+
+gnome-shell-pomodoro (0.13.0-1) unstable; urgency=low
+
+  * New upstream version 0.13.0  (Closes: #838573)
+  * wrap-and-sort
+  * libupower-glib-dev need in Build-deps has been dropped 2 years ago
+  * intltool and gnome-common build-deps removed in 0.13.0 by upstream
+  * gsettings-desktop-schemas build-dep changed to gsettings-desktop-schemas-dev
+  * New build dependency: appstream-util
+  * libgnome-desktop-3-dev dropped from build-deps from 0.13.0
+  * libdbus-glib-1-dev build-dep need has been dropped since 0.11.2
+  * Update minimum required versions for the build-deps
+  * libtelepathy-glib-dev build-dep need has been dropped in 0.12.0
+  * New build-dep: desktop-file-utils
+  * Man page dropped by upstream
+  * Re-add manpage removed by upstream to clean lintian warnings
+  * New dependency: autoconf-archive
+  * Installing new glib schema from 0.13
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 22 Jan 2017 19:55:51 -0800
+
+gnome-shell-pomodoro (0.12.3-1) unstable; urgency=medium
+
+  * New upstream version 0.12.3
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 02 Oct 2016 19:09:17 -0700
+
+gnome-shell-pomodoro (0.12.2-1) unstable; urgency=medium
+
+  * New upstream version 0.12.2
+  * Adding new dependencies from the latest version
+  * Fixing watch file.
+    Thanks to Ghislain Antony Vaillant (Closes: #837550)
+  * Dropping the need for fonts-droid (Closes: #804680)
+  * Raising gnome-shell compatibility to 3.23 (Closes: #837595, #837192)
+  * Removing patch integrated in latest upstream version
+  * Adding the new libraries to the installation rules
+    and removing the .la files + add lintian overrides
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sat, 17 Sep 2016 09:43:12 -0700
+
+gnome-shell-pomodoro (0.11.2-2) unstable; urgency=medium
+
+  * Bump the max version to fit 0.11.2 requirements (Closes: #821928)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 24 Apr 2016 09:36:54 -0700
+
+gnome-shell-pomodoro (0.11.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.11.2
+  * Remove patches included in the latest upstream version
+  * Removing focus_on_click declaration (Closes: #819786)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 10 Apr 2016 14:30:30 -0700
+
+gnome-shell-pomodoro (0.11.0-2) unstable; urgency=medium
+
+  * update gnome-shell dependency (Closes: #801814)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Thu, 15 Oct 2015 20:53:10 -0700
+
+gnome-shell-pomodoro (0.11.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.11.0 (Closes: #790867)
+  * Removing the 2 quilt patches integrated by upstream
+  * Updating dependencies for the new release:
+    - package gnome-shell-pomodoro dependecy:
+      gnome-shell version bumped to 3.11.90/3.17 as per upstream requirements
+    - Build-Deps:
+      libtelepathy-glib-dev: New upstream dependency
+      Gnome packages bumped to 3.13 as per upstream dependency:
+      gsettings-desktop-schemas, libgnome-desktop-3-dev,libgtk-3-dev
+  * Adding new file to the installation process:
+    - usr/share/appdata/org.gnome.Pomodoro.appdata.xml
+  * Disable the unit tests for now. Will be re-enabled after fixing #791494
+  * Remove unused copyright paragraph after upstream removed their embedded
+    copy of libcamberra
+
+ -- Joseph Herlant <herlantj@gmail.com>  Fri, 03 Jul 2015 23:42:53 -0700
+
+gnome-shell-pomodoro (0.10.3-1) unstable; urgency=low
+
+  * Moving fail-missing to override_dh_install only to avoid side effects
+  * Updating standards version to 3.9.6
+  * Imported Upstream version 0.10.3
+  * Updating quilt patches for 0.10.3
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 19 Oct 2014 11:12:39 +0200
+
+gnome-shell-pomodoro (0.10.2-6) unstable; urgency=medium
+
+  * Moving fail-missing option to dh to avoid override_dh_install
+  * Fixing FTBFS on gnome-shell 3.14 (Closes: #763258)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Mon, 29 Sep 2014 09:41:48 +0200
+
+gnome-shell-pomodoro (0.10.2-5) unstable; urgency=medium
+
+  * Adding the license for libcanbera.vapi and removing it from build
+    (Closes: #758705)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Tue, 02 Sep 2014 11:58:19 +0200
+
+gnome-shell-pomodoro (0.10.2-4) unstable; urgency=low
+
+  * Adding a patch to have a manpage for gnome-pomodoro in SGML format to
+    solve binary-without-manpage lintian warning. That brings a new build
+    dependency (docbook2man)
+  * Adding patch to have an upstream ChangeLog file (as NEWS file) to solve
+    no-upstream-changelog lintian pedantic.
+  * Moving architecture-independent data in a separate package to solve
+    arch-dep-package-has-big-usr-share lintian info.
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 10 Aug 2014 18:49:16 +0200
+
+gnome-shell-pomodoro (0.10.2-3) unstable; urgency=medium
+
+  * Removing non-linux kernels as not supported anymore by gnome-shell which
+    caused the package to be stuck to unstable stage.
+  * Moving to dh 9 to set hardening flags (cleans up som lintian complains).
+
+ -- Joseph Herlant <herlantj@gmail.com>  Tue, 29 Jul 2014 22:03:38 +0200
+
+gnome-shell-pomodoro (0.10.2-2) unstable; urgency=medium
+
+  * Applying latest upstream patches.
+  * Package ready to go into unstable for gnome-shell 3.12 transition.
+    (Closes: #755543)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Tue, 22 Jul 2014 19:40:08 +0200
+
+gnome-shell-pomodoro (0.10.2-1) experimental; urgency=low
+
+  * Upload to experimental.
+  * Moving repo from github to Alioth
+  * Updating package to 0.10.2 for gnome-shell 3.12 (Closes: #748191)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sun, 15 Jun 2014 19:15:30 +0200
+
+gnome-shell-pomodoro (0.8.0-1) unstable; urgency=low
+
+  * Initial release based on commit 863e895b67a8e70809ebe3bb8aa5883e142aa00f
+    from banch gnome-shell-extension-3.8 that includes several fixes over the
+    0.8.0 tag, applied as one patch (Closes: #728031)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Mon, 20 Jan 2014 18:27:23 +0100

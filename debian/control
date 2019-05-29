@@ -1,0 +1,68 @@
+Source: gnome-shell-pomodoro
+Maintainer: Joseph Herlant <herlantj@gmail.com>
+Section: gnome
+Priority: optional
+Build-Depends: appstream-util,
+               autoconf-archive,
+               debhelper (>= 11),
+               desktop-file-utils,
+               gettext,
+               gjs,
+               gobject-introspection (>= 1.36.0),
+               gsettings-desktop-schemas-dev (>= 3.16.0),
+               libayatana-appindicator3-dev,
+               libcanberra-dev (>= 0.30),
+               libgirepository1.0-dev,
+               libglib2.0-dev (>= 2.38.0),
+	       libgom-1.0-dev,
+               libgstreamer1.0-dev (>= 1.2.0),
+               libgtk-3-dev (>= 3.20.0),
+               libpeas-dev (>= 1.5.0),
+	       libsqlite3-dev,
+               pkg-config,
+               valac (>=0.28),
+               xauth,
+               xvfb
+Standards-Version: 4.2.1
+Homepage: https://github.com/codito/gnome-pomodoro/
+Vcs-Browser: https://salsa.debian.org/debian/gnome-shell-pomodoro
+Vcs-Git: https://salsa.debian.org/debian/gnome-shell-pomodoro.git
+
+Package: gnome-shell-pomodoro
+Architecture: linux-any
+Depends: gnome-shell (>= 3.15),
+         gnome-shell-pomodoro-data (>= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: GNOME Shell time-management app
+ This GNOME Shell app helps you to manage time according to the
+ pomodoro technique.
+ .
+ Features:
+  * puts a countdown timer in the GNOME Shell top panel;
+  * nags you with reminders about taking a break;
+  * uses full screen notifications that can be easily dismissed;
+  * hides other notifications until the start of the break;
+  * sets your IM (Empathy) status to "busy".
+ .
+ The pomodoro technique is a time and focus management method which improves
+ productivity and quality of work. The name comes from a kitchen timer, which
+ can be used to keep track of time. In short, you are supposed to focus on work
+ for around 25 minutes and then have a well deserved break in which you should
+ relax. Then when this cycle repeats for the fourth time you should take a
+ longer break (have a walk or something).
+
+Package: gnome-shell-pomodoro-data
+Architecture: all
+Replaces: gnome-shell-pomodoro (<< 0.10.2-4)
+Breaks: gnome-shell-pomodoro (<< 0.10.2-4)
+Depends: ${misc:Depends}
+Description: Data for GNOME Shell time-management app
+ This package contains the architecture-independent data
+ used by the gnome-shell-pomodoro package.
+ .
+ This GNOME Shell app helps you to manage time according to the
+ pomodoro technique.
+ .
+ For more information about gnome-shell-pomodoro, see the gnome-shell-pomodoro
+ package description.

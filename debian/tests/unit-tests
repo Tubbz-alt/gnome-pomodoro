@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dbus-run-session -- xvfb-run -a make -C tests check 2> >(grep -vE '^(Activating|Successfully activated)')>&2

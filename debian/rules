@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_autoreconf:
+	dh_autoreconf ./autogen.sh -- --prefix=/usr --datadir=/usr/share
+
+override_dh_install:
+	# Remove *.la files per policy 3.9.1.0
+	rm -fv debian/tmp/usr/lib/*/*.la
+	rm -fv debian/tmp/usr/lib/*/gnome-pomodoro/plugins/*.la
+	dh_install --fail-missing
+
+override_dh_auto_test:
+	# tests require an X server
+	xvfb-run -a dh_auto_test

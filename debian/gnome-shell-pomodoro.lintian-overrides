@@ -1,0 +1,2 @@
+gnome-shell-pomodoro: non-dev-pkg-with-shlib-symlink
+gnome-shell-pomodoro: package-name-doesnt-match-sonames
